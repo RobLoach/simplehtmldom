@@ -1,12 +1,7 @@
+; $Id$
 name = simplehtmldom API
-description = "A wrapper module around the simplehtmldom PHP library at sourceforge"
+description = A wrapper module around the simplehtmldom PHP library at sourceforge.
 package = Filter
 dependencies[] = node
 core = 6.x
-
-; Information added by drupal.org packaging script on 2008-12-22
-version = "6.x-1.11"
-core = "6.x"
-project = "simplehtmldom"
-datestamp = "1229923537"
 

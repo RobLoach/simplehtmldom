@@ -1,4 +1,5 @@
 <?php
+// $Id$
 
 // Include the only file of the library.
 // There are 5-6 funcs there and their names are not prefixed. But these names are quite unprobable to cause collisions...
