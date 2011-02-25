@@ -1,4 +1,3 @@
-; $Id$
 name = simplehtmldom API
 description = A wrapper module around the simplehtmldom PHP library at sourceforge.
 package = Filter
