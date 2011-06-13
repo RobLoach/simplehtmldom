@@ -3,7 +3,7 @@
 // Include the only file of the library.
 // There are 5-6 funcs there and their names are not prefixed. But these names are quite unprobable to cause collisions...
 
-if (!function_exists($function_name) ) {
+if (!function_exists('str_get_html')) {
   require_once('simplehtmldom/simple_html_dom.php');
 }
 else {
