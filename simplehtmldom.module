@@ -28,8 +28,11 @@ function _simplhtmldom_get_library_path() {
   $file = 'simple_html_dom.php';
   $library = 'simplehtmldom';
   // Support libraries module.
-  if (module_exists('libraries') && file_exists(libraries_get_path($library) . "/$file")) {
-    return libraries_get_path($library) . "/$file";
+  if (module_exists('libraries') && function_exists('libraries_get_path')) {
+    $path = libraries_get_path($library) . "/$file";
+    if (file_exists($path)) {
+      return $path;
+    }
   }
   else {
     $paths = array(
