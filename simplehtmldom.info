@@ -1,5 +1,4 @@
 name = simplehtmldom API
-description = A wrapper module around the simplehtmldom PHP library at sourceforge.
-package = Filter
+description = A bridge between the PHP Simple HTML DOM Parser library (simplehtmldom) and Drupal.
 core = 6.x
 
