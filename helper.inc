@@ -22,7 +22,7 @@ function _simplhtmldom_get_library_path() {
   }
 
   // Support libraries module.
-  if (module_exists('libraries') && function_exists('libraries_get_path')) {
+  if (\Drupal::moduleHandler()->moduleExists('libraries') && function_exists('libraries_get_path')) {
     $library_path = libraries_get_path($library) . "/$file";
     if (file_exists($library_path)) {
       return $library_path;
@@ -33,8 +33,9 @@ function _simplhtmldom_get_library_path() {
       'sites/all/libraries/' . $library,
       drupal_get_path('module', 'simplehtmldom') . '/' . $library,
       drupal_get_path('module', 'simplehtmldom') . "/libraries",
-      'profiles/' . variable_get('install_profile', 'default') . '/libraries/' . $library,
+      'profiles/' . drupal_get_profile() . '/libraries/' . $library,
     );
+
     foreach ($paths as $library_dir) {
       $library_path = $library_dir . "/$file";
       if (file_exists($library_path)) {
